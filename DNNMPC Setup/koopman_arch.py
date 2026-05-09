@@ -1,6 +1,8 @@
 import torch
 import torch.nn as nn
 import numpy as np
+from torch._C import dtype
+
 
 class Encoder(nn.Module):
   def __init__(self, in_dim, out_dim):
@@ -59,6 +61,7 @@ class KoopmanModel(nn.Module):
         self.B = nn.Parameter(torch.randn(z_dim, u_dim))
         self.bz = nn.Parameter(torch.zeros(z_dim))
         self.z_dim = z_dim
+        self.dt = dt
 
     def forward(self, x, u):
         z = self.encoder(x)
