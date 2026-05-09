@@ -62,7 +62,7 @@ class KoopmanModel(nn.Module):
 
     def forward(self, x, u):
         z = self.encoder(x)
-        z_next = self.step_latent(z, u, self.dt)
+        z_next = self.step(z, u, self.dt)
         x_rec = self.decoder(z)
 
         return z, z_next, x_rec
