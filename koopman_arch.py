@@ -49,7 +49,7 @@ class ControlNet(nn.Module):
     return self.net(u)
 
 class KoopmanModel(nn.Module):
-    def __init__(self, x_dim, z_dim, u_dim):
+    def __init__(self, x_dim, z_dim, u_dim, dt):
         super().__init__()
 
         self.encoder = Encoder(x_dim, z_dim)
