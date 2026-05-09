@@ -1,0 +1,17 @@
+venv/
+.venv/
+
+.idea/
+__pycache__/
+*.pyc
+
+checkpoints/
+results/
+
+*.pth
+*.pt
+
+Data/
+data/
+
+*.csv

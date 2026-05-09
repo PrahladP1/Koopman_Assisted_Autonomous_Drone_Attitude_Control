@@ -1,0 +1,15 @@
+numpy==2.4.4
+    # via matplotlib
+pandas==3.0.2
+    # via matplotlib
+torch==2.11.0
+    # via matplotlib
+optuna==4.8.0
+    # via matplotlib
+matplotlib==3.10.9
+    # via
+    #   -r requirements.in
+    #   seaborn
+osqp==1.1.1
+    # via matplotlib
+scipy==1.17.1
