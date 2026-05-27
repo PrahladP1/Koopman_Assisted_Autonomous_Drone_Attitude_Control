@@ -250,8 +250,10 @@ def train_stage2(model, train_loader_roll, val_loader_roll, config, device):
                   f"kin={metrics['kin']:.2e}",
                   f"psi={metrics['psi']:.2e}")
 
-            if val_loss < best_val:
-                best_val = metrics["ms"]
+            val_ms = metrics["ms"]
+            if val_ms < best_ms:
+                best_ms = val_ms
+                best_val = val_loss
                 no_improve = 0
                 torch.save({"model_state_dict": model.state_dict(), "config": config}, "best_model.pth")
                 print("Saved best model.")
