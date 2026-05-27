@@ -30,12 +30,12 @@ def load_state_ctrl_hist():
 def objective(trial):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    latent_dim = trial.suggest_int("latent_dim", 4, 8, step=2)
-    lr_stage1 = trial.suggest_float("lr_stage1", 1e-5, 1e-3, log=True)
-    lr_stage2 = trial.suggest_float("lr_stage2", 1e-5, 1e-3, log=True)
-    gamma = trial.suggest_float("gamma", 0.90, 0.99)
-    T_roll = trial.suggest_int("T_roll", 5, 10)
-    w_recon = trial.suggest_float("w_recon", 0.01, 0.1, log=True)
+    latent_dim = trial.suggest_int("latent_dim", 8, 16, step=2)
+    lr_stage1 = trial.suggest_float("lr_stage1", 1e-4, 5e-4, log=True)
+    lr_stage2 = trial.suggest_float("lr_stage2", 1e-5, 2e-4, log=True)
+    gamma = trial.suggest_float("gamma", 0.96, 0.995)
+    T_roll = trial.suggest_int("T_roll", 15, 35, step=5)
+    w_recon = trial.suggest_float("w_recon", 1e-3, 5e-2, log=True)
     w_lin = trial.suggest_float("w_lin", 0.1, 10.0, log=True)
     w_pred = trial.suggest_float("w_pred", 0.1, 10.0, log=True)
     w_ms = trial.suggest_float("w_ms", 0.1, 10.0, log=True)
