@@ -63,6 +63,8 @@ def objective(trial):
               "w_pred": w_pred,
               "w_lin": w_lin,
               "w_ms": w_ms,
+              "w_kin": w_kin,
+              "w_psi": w_psi,
               "patience": 50,
               "std_x": stats["std_x"],
               "mu_x": stats["mu_x"],
