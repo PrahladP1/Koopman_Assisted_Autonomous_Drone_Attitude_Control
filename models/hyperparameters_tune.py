@@ -38,7 +38,9 @@ def objective(trial):
     w_recon = trial.suggest_float("w_recon", 1e-3, 5e-2, log=True)
     w_lin = trial.suggest_float("w_lin", 0.1, 10.0, log=True)
     w_pred = trial.suggest_float("w_pred", 0.1, 10.0, log=True)
-    w_ms = trial.suggest_float("w_ms", 0.1, 10.0, log=True)
+    w_ms = trial.suggest_float("w_ms", 1.0, 20.0, log=True)
+    w_kin = trial.suggest_float("w_kin", 1e-2, 1e-1, log=True)
+    w_psi = trial.suggest_float("w_psi", 1e-3, 5e-2, log=True)
     batch_size = trial.suggest_categorical("batch_size", [256, 512, 1024])
 
     X_all, U_all = load_state_ctrl_hist()
