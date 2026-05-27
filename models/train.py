@@ -155,7 +155,8 @@ def train_stage2(model, train_loader_roll, val_loader_roll, config, device):
     optimizer = optim.Adam(model.parameters(), lr=config["lr_stage2"])
     mse = nn.MSELoss()
 
-    best_val = float("inf")
+    best_val = np.inf
+    best_ms = np.inf
     patience = config["patience"]
     no_improve = 0
     n_samples = 0
