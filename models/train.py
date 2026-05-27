@@ -262,7 +262,7 @@ def train_stage2(model, train_loader_roll, val_loader_roll, config, device):
                 if no_improve >= patience:
                     print("Early stopping.")
                     break
-    return best_val
+    return best_ms
 
 def train_model(model, train_loader, train_loader_roll, val_loader, val_loader_roll, config, device):
     print("Stage 1 Training...")
