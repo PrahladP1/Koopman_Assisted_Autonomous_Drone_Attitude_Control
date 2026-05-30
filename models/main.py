@@ -79,8 +79,8 @@ def main():
         "scheduled_sampling": True,
         "scheduled_start_epoch": 10,
         "scheduled_end_epoch": 80,
-        "batch_size": 1024,
-        "T_roll": 2}
+        "batch_size": 256,
+        "T_roll": 25}
 
     model = KoopmanModel(n, latent_dim, p, config["dt"]).to(device)
 
