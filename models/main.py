@@ -55,7 +55,7 @@ def main():
 
     n = Xk.shape[1]
     p = Uk.shape[1]
-    latent_dim = 8
+    latent_dim = 16
 
     config = {
         "latent_dim": latent_dim,
