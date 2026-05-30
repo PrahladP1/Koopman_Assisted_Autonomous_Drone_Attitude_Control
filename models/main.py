@@ -60,9 +60,9 @@ def main():
     config = {
         "latent_dim": latent_dim,
         "dt": 0.01,
-        "gamma": 0.97,
-        "lr_stage1": 0.0005170214650506643,
-        "lr_stage2": 5e-5,
+        "gamma": 0.9757401687209108,
+        "lr_stage1": 0.00024166219239025414,
+        "lr_stage2": 3.626992500807833e-05,
         "N_stage1": 400,
         "N_stage2": 600,
         "patience": 50,
