@@ -13,4 +13,5 @@ async def main():
 
     async for position in drone.telemetry.position_velocity_ned():
         print(f"x={position.position.north_m:.2f}, y={position.position.east_m:.2f}, z={position.position.down_m:.2f}")
+if __name__ == "__main__":
     asyncio.run(main())
